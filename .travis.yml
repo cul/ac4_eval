@@ -23,8 +23,8 @@ before_script:
 - cp config/secrets.yml.travis config/secrets.yml
 - cp config/redis.yml.sample config/redis.yml
 - cp config/devise.yml.travis config/devise.yml
-- cp config/solr.yml.sample config/solr.yml
-- cp config/fedora.yml.sample config/fedora.yml
+- cp config/solr.yml.travis config/solr.yml
+- cp config/fedora.yml.travis config/fedora.yml
 - redis-cli info
 notifications:
   slack:
