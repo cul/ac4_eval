@@ -1,0 +1,7 @@
+# This is a secret_key for Travis, do not use anywhere else
+development:
+  secret_key: '5d9685ad642234257d5e1badc94011b5ad0bbb26660694dd6087ea6732282b365a778291f3ee19272423342087cff41a18dce9348dc88b1d99a84ef588fbd47e'
+test:
+  secret_key: '5d9685ad642234257d5e1badc94011b5ad0bbb26660694dd6087ea6732282b365a778291f3ee19272423342087cff41a18dce9348dc88b1d99a84ef588fbd47e'
+production:
+  secret_key:

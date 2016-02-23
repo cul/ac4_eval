@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
-solr.yml
+database.yml
+devise.yml
 fedora.yml
 secrets.yml
+solr.yml

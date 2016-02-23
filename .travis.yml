@@ -1,0 +1,31 @@
+language: ruby
+cache: bundler
+bundler_args: "--without development debug"
+sudo: false
+rvm:
+- 2.2.1
+jdk:
+- oraclejdk8
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - JS=true
+  matrix:
+  - TEST_SUITE=feature
+  - TEST_SUITE=unit
+  - TEST_SUITE=rubocop
+before_install:
+- export PATH="$PATH:$(pwd)/fits"
+services:
+- redis-server
+before_script:
+- cp config/database.yml.travis config/database.yml
+- cp config/secrets.yml.travis config/secrets.yml
+- cp config/redis.yml.sample config/redis.yml
+- cp config/devise.yml.travis config/devise.yml
+- cp config/solr.yml.sample config/solr.yml
+- cp config/fedora.yml.sample config/fedora.yml
+- redis-cli info
+notifications:
+  slack:
+    secure: qNLJwB+ZahfiGnLRl1zA4TZeVXzY63Br5ynBcT5AMxl/UqHHi3lwWL2InlF1WfacA5hyefH8cqZaE8cmq4aO0Np4J9Y/xY4wdJhh1etDUZU+Rl3oY4oy7IkF/JGTsavhg01T9fIRaScfa+8W5HlrYNuizdzs8ChQ7cBxN3zj8OmTdF1OuF/DGdwMAP6imEpSpq/SCMYCk6xu0K/j9q71GGTNob3pxK1szHmHSPySUaHYAuRjlLOeS5bRlwGVEy5ghCXoiUs4NBqhXI53WBKHmwkNfIinjyTikMLuW/rUGiwBoO+vDLWMJ/GGe+aiHqT4OF1RKg/hXIobwitUn2glvEyCDIERezaWFD62jgiTrw87MkweFO4k41LXiONtlNemHrYkys3PoR034umpoVtNjlTpxPxyZxFeq5bOCI6Mgp3QWAfF0dZWxJxI1LKAfZSR/0Zh6CB1BiMBu8+Fky6ve1UY9uhS0VCWJToMkeahDqUjzWepIjNQUgBCyHMgKX9CxVo+yGicDLeyj8HA6RAyoA9hYrG05wF5N9CF6C8mXx67ukWQ5iqn1vRKlhUZNCgiKNOgWCWt5p9rTI+GAgYaDPNbUSz99dt9DKBcsJgIAYdSmPDlGHeLuncQStkwB0EJtYFjFipWRjlu2lKspPpHXXSi1eGOYVSlo/FH+RM07KI=
