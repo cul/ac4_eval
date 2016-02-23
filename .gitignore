@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
+/fcrepo4-data/*
+
 database.yml
 devise.yml
 fedora.yml
