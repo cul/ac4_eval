@@ -18,6 +18,9 @@ Lint/ImplicitStringConcatenation:
 Metrics/LineLength:
   Enabled: true
   Max: 100
+  Exclude:
+    # only because the solr name generators are very long-named
+    - 'app/controllers/catalog_controller.rb'
 
 Metrics/AbcSize:
   Enabled: false
@@ -32,7 +35,9 @@ Metrics/MethodLength:
   Enabled: true
 
 Metrics/ClassLength:
-  Exclude: []
+  Exclude:
+    # exclude until we have a better DSL for the Blacklight config
+    - 'app/controllers/catalog_controller.rb'
 
 Metrics/ModuleLength:
   Exclude: []
@@ -92,6 +97,8 @@ Style/PredicateName:
 
 Style/GlobalVars:
   Exclude:
+    # pending https://github.com/projecthydra/sufia/issues/1599
+    - 'config/initializers/redis_config.rb'
     - 'spec/**/*'
 
 Style/SingleLineBlockParams:

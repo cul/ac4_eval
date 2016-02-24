@@ -125,6 +125,7 @@ GEM
       execjs (~> 2.0)
     bcp47 (0.3.3)
       i18n
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     blacklight (6.0.2)
@@ -215,6 +216,15 @@ GEM
     debug_inspector (0.0.2)
     deprecation (0.2.2)
       activesupport
+    devise (3.5.6)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    devise-guests (0.5.0)
+      devise
     diff-lcs (1.2.5)
     domain_name (0.5.20160128)
       unf (>= 0.0.5, < 1.0.0)
@@ -428,6 +438,7 @@ GEM
       solrizer (~> 3.3)
     openseadragon (0.2.1)
       rails (> 3.2.0)
+    orm_adapter (0.5.0)
     os (0.9.6)
     parser (2.3.0.6)
       ast (~> 2.2)
@@ -539,6 +550,8 @@ GEM
       redis (~> 3.0, >= 3.0.4)
     redlock (0.1.5)
       redis (~> 3, >= 3.0.5)
+    responders (2.1.1)
+      railties (>= 4.2.0, < 5.1)
     resque (1.25.2)
       mono_logger (~> 1.0)
       multi_json (~> 1.0)
@@ -689,6 +702,8 @@ GEM
     vcr (3.0.1)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -716,15 +731,19 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
+  devise
+  devise-guests (~> 0.3)
   equivalent-xml
   factory_girl_rails (~> 4.1)
   fcrepo_wrapper
   fuubar
+  globalid
   jbuilder (~> 2.0)
   jquery-rails
   kaminari!
   poltergeist (~> 1.9)
   rails (= 4.2.5.1)
+  rsolr (~> 1.0.6)
   rspec-activemodel-mocks
   rspec-its
   rspec-rails

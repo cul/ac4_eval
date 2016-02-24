@@ -75,3 +75,8 @@ group :test do
   gem 'vcr'
   gem 'webmock', require: false
 end
+
+gem 'rsolr', '~> 1.0.6'
+gem 'globalid'
+gem 'devise'
+gem 'devise-guests', '~> 0.3'

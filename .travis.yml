@@ -19,11 +19,13 @@ before_install:
 services:
 - redis-server
 before_script:
+- cp config/analytics.yml.travis config/analytics.yml
 - cp config/database.yml.travis config/database.yml
 - cp config/secrets.yml.travis config/secrets.yml
 - cp config/redis.yml.sample config/redis.yml
+- cp config/role_map.yml.sample config/role_map.yml
 - cp config/devise.yml.travis config/devise.yml
-- cp config/solr.yml.travis config/solr.yml
+- cp config/blacklight.yml.travis config/blacklight.yml
 - cp config/fedora.yml.travis config/fedora.yml
 - redis-cli info
 notifications:

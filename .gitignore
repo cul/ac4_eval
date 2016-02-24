@@ -18,8 +18,13 @@
 
 /fcrepo4-data/*
 
+# these configurations are either generated or linked on deployment
+analytics.yml
+blacklight.yml
 database.yml
 devise.yml
 fedora.yml
+redis.yml
+role_map.yml
 secrets.yml
 solr.yml
