@@ -26,5 +26,9 @@ module SufiaEval
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    # Uncomment below if autoloading from lib is desirable
+    # config.autoload_paths += Dir["#{config.root}/lib/**/*"]
+    # config.autoload_paths << Rails.root.join('lib')
+    require 'sufia/redis_config'
   end
 end

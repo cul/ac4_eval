@@ -98,7 +98,7 @@ Style/PredicateName:
 Style/GlobalVars:
   Exclude:
     # pending https://github.com/projecthydra/sufia/issues/1599
-    - 'config/initializers/redis_config.rb'
+    - 'lib/sufia/redis_config.rb'
     - 'spec/**/*'
 
 Style/SingleLineBlockParams:

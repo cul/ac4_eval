@@ -1,7 +1,5 @@
-require 'resque'
-config = YAML.load(ERB.new(IO.read(File.join(Rails.root, 'config', 'redis.yml'))).result)[Rails.env]
-config = config.with_indifferent_access
-Resque.redis = Redis.new(host: config[:host], port: config[:port], thread_safe: true)
+require 'sufia/redis_config'
+Sufia::RedisConfig.configure(Sufia::RedisConfig::REDIS_CONFIG_PATH)
+Resque.redis = Redis.current
 
 Resque.inline = Rails.env.test?
-Resque.redis.namespace = "#{CurationConcerns.config.redis_namespace}:#{Rails.env}"

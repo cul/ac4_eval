@@ -1,0 +1,12 @@
+development:
+  url: redis://user:password@localhost:6379
+  nonsense: nonsense
+test:
+  url: redis://user:password@localhost:6379
+  nonsense: nonsense
+production:
+  url: redis://user:password@localhost:6379
+  nonsense: nonsense
+resque:
+  url: redis://user:password@localhost:6379
+  nonsense: nonsense
