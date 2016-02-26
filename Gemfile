@@ -90,5 +90,7 @@ end
 
 gem 'rsolr', '~> 1.0.6'
 gem 'globalid'
-gem 'devise'
+# cul_omniauth not compatible with devise 3.5.6
+gem 'devise', '~> 3.4.1'
 gem 'devise-guests', '~> 0.3'
+gem 'cul_omniauth'
