@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224182744) do
+ActiveRecord::Schema.define(version: 20160226183900) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -285,10 +285,14 @@ ActiveRecord::Schema.define(version: 20160224182744) do
     t.datetime "groups_last_update"
     t.string   "linkedin_handle"
     t.string   "orcid"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["provider"], name: "index_users_on_provider"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
   create_table "version_committers", force: :cascade do |t|
     t.string   "obj_id"
