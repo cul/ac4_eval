@@ -32,7 +32,8 @@ set :linked_files, fetch(:linked_files, []).push(
   'config/devise.yml',
   'config/fedora.yml',
   'config/redis.yml',
-  'config/role_map.yml'
+  'config/role_map.yml',
+  'config/solr.yml'
 )
 
 # Default value for linked_dirs is []
