@@ -25,18 +25,19 @@ set :log_level, :debug
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push(
-	'config/database.yml', 
-	'config/secrets.yml',
-	'config/analytics.yml',
-	'config/blacklight.yml',
-	'config/devise.yml',
-	'config/fedora.yml',
-	'config/redis.yml',
-	'config/role_map.yml'
-	)
+  'config/database.yml',
+  'config/secrets.yml',
+  'config/analytics.yml',
+  'config/blacklight.yml',
+  'config/devise.yml',
+  'config/fedora.yml',
+  'config/redis.yml',
+  'config/role_map.yml'
+)
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+# generic_linked_dirs = %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system)
+# set :linked_dirs, fetch(:linked_dirs, []).push(generic_linked_dirs)
 set :linked_dirs, fetch(:linked_dirs, []).push('log')
 
 # Default value for default_env is {}
@@ -50,8 +51,10 @@ set :passenger_restart_with_touch, true
 namespace :deploy do
   desc "Add tag based on current version"
   task :auto_tag do
-    current_version_and_yyymmd_tag = "v" + IO.read("VERSION").to_s.strip + "/" + Date.today.strftime("%Y%m%d")
-    ask(:tag, current_version_and_yyymmd_tag)
+    current_version = IO.read('VERSION').to_s.strip
+    yyyymmd = Date.today.strftime('%Y%m%d')
+    default_tag = "v#{current_version}/#{yyyymmd}"
+    ask(:tag, default_tag)
     tag = fetch(:tag)
 
     system("git tag -a #{tag} -m 'auto-tagged' && git push origin --tags")
@@ -71,5 +74,4 @@ namespace :deploy do
       end
     end
   end
-
 end
