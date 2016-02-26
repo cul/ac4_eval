@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:cul/ac4_eval.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-ask :branch, proc { `git tag --sort=version:refname`.split("\n").last }
+ask :branch, proc { `git tag -l`.split("\n").last }
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
@@ -32,7 +32,7 @@ set :linked_files, fetch(:linked_files, []).push(
 	'config/devise.yml',
 	'config/fedora.yml',
 	'config/redis.yml',
-	'config/role_map.yml',
+	'config/role_map.yml'
 	)
 
 # Default value for linked_dirs is []

@@ -428,6 +428,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    mysql2 (0.3.20)
     nest (1.1.2)
       redis
     net-http-persistent (2.9.4)
@@ -767,6 +768,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari!
+  mysql2 (~> 0.3.18)
   poltergeist (~> 1.9)
   rails (= 4.2.5.1)
   rsolr (~> 1.0.6)
