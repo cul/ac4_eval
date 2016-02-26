@@ -1,4 +1,4 @@
-if Rails.env == "development" || "test"
+if (Rails.env == "development") || (Rails.env == "test")
   require 'rspec/core'
   require 'rspec/core/rake_task'
   require 'solr_wrapper'
