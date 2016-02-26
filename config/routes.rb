@@ -7,7 +7,17 @@ Rails.application.routes.draw do
     concerns :searchable
   end
 
-  devise_for :users
+  devise_for :users, skip: [:sessions], controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
+  devise_scope :user do
+    get 'sign_in', to: 'users/sessions#new', as: :new_user_session
+    get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
+  end
+
+  resources :sessions, controller: 'users/sessions'
+
   Hydra::BatchEdit.add_routes(self)
   # This must be the very last route in the file because it has a catch-all route for 404 errors.
   # This behavior seems to show up only in production mode.
