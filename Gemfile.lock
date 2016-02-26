@@ -167,6 +167,21 @@ GEM
     builder (3.2.2)
     byebug (8.2.2)
     cancancan (1.13.1)
+    capistrano (3.4.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
+    capistrano-rails (1.1.6)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -416,6 +431,9 @@ GEM
     nest (1.1.2)
       redis
     net-http-persistent (2.9.4)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.0.2)
     netrc (0.11.0)
     noid (0.8.0)
     nokogiri (1.6.7.2)
@@ -674,6 +692,9 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
+    sshkit (1.8.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     stomp (1.3.4)
     sxp (0.1.5)
     thor (0.19.1)
@@ -728,6 +749,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  capistrano (~> 3.4.0)
+  capistrano-bundler (~> 1.1)
+  capistrano-passenger (~> 0.1)
+  capistrano-rails (~> 1.1)
+  capistrano-rvm (~> 0.1)
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
@@ -762,4 +788,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
