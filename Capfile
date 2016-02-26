@@ -1,11 +1,10 @@
 # default requires
 require 'capistrano/setup'
 require 'capistrano/deploy'
-# additional optional modules used by clio
+# additional optional modules used
 require 'capistrano/rvm'
-require 'capistrano/bundler'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
+# capistrano/rails includes bundler, assets, and migrations
+require 'capistrano/rails'
 require 'capistrano/passenger'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
