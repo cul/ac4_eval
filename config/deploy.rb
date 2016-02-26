@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'ac4_eval'
+set :application, 'academiccommons_dev'
 set :repo_url, 'git@github.com:cul/ac4_eval.git'
 
 # Default branch is :master
