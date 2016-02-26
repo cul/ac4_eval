@@ -7,4 +7,6 @@ Rails.application.load_tasks
 
 task default: :ci
 
-require 'solr_wrapper/rake_task'
+if (Rails.env == "development") || (Rails.env == "test")
+  require 'solr_wrapper/rake_task'
+end
