@@ -66,12 +66,6 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, 'resque:restart_workers'
-        end
-      end
     end
   end
 end
