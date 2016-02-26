@@ -1,8 +1,10 @@
-require 'rspec/core'
-require 'rspec/core/rake_task'
-require 'solr_wrapper'
-require 'fcrepo_wrapper'
-require 'rubocop/rake_task'
+if Rails.env == "development" || "test"
+  require 'rspec/core'
+  require 'rspec/core/rake_task'
+  require 'solr_wrapper'
+  require 'fcrepo_wrapper'
+  require 'rubocop/rake_task'
+end
 
 desc 'Run style checker'
 RuboCop::RakeTask.new(:rubocop) do |task|
