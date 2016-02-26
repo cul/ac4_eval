@@ -7,9 +7,11 @@ if (Rails.env == "development") || (Rails.env == "test")
 end
 
 desc 'Run style checker'
-RuboCop::RakeTask.new(:rubocop) do |task|
-  task.requires << 'rubocop-rspec'
-  task.fail_on_error = true
+task :rubocop do
+  RuboCop::RakeTask.new(:rubocop) do |task|
+    task.requires << 'rubocop-rspec'
+    task.fail_on_error = true
+  end
 end
 
 desc 'Run specs and style checker'
