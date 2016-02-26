@@ -21,6 +21,7 @@
 # these configurations are either generated or linked on deployment
 analytics.yml
 blacklight.yml
+cas.yml
 database.yml
 devise.yml
 fedora.yml
