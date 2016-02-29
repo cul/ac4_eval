@@ -30,4 +30,5 @@ role_map.yml
 secrets.yml
 solr.yml
 
+!/spec/fixtures/**/cas.yml
 !/spec/fixtures/**/redis.yml

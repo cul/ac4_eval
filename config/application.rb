@@ -31,5 +31,14 @@ module SufiaEval
     # config.autoload_paths += Dir["#{config.root}/lib/**/*"]
     # config.autoload_paths << Rails.root.join('lib')
     require 'sufia/redis_config'
+
+    # testable override necessary pending https://github.com/cul/cul_omniauth/issues/2
+    def self.cas_configuration_opts
+      if File.exist?(File.join(Rails.root, 'config', 'cas.yml'))
+        super
+      else
+        @cas_opts = { provider: '' }
+      end
+    end
   end
 end

@@ -1,0 +1,8 @@
+test:
+  host: test.cas.org
+# these are very fake URL patterns for testing
+  login_url: /enloginator
+  logout_url: /exloginator
+  service_validate_url: /validator
+  disable_ssl_verification: true
+  provider: saml
