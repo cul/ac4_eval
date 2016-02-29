@@ -29,6 +29,7 @@ set :linked_files, fetch(:linked_files, []).push(
   'config/secrets.yml',
   'config/analytics.yml',
   'config/blacklight.yml',
+  'config/cas.yml',
   'config/devise.yml',
   'config/fedora.yml',
   'config/redis.yml',

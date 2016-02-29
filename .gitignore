@@ -21,6 +21,7 @@
 # these configurations are either generated or linked on deployment
 analytics.yml
 blacklight.yml
+cas.yml
 database.yml
 devise.yml
 fedora.yml
@@ -29,4 +30,5 @@ role_map.yml
 secrets.yml
 solr.yml
 
+!/spec/fixtures/**/cas.yml
 !/spec/fixtures/**/redis.yml
