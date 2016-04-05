@@ -6,7 +6,6 @@ CurationConcerns.configure do |config|
 
   config.display_microdata = true
   config.microdata_default_type = 'http://schema.org/CreativeWork'
-  i18n_params = { default: config.microdata_default_type }
 
   # Enable displaying usage statistics in the UI
   # Defaults to FALSE
