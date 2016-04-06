@@ -4,5 +4,7 @@ class GenericWork < ActiveFedora::Base
   include ::CurationConcerns::WorkBehavior
   include ::CurationConcerns::BasicMetadata
   include Sufia::WorkBehavior
+  include LegacyProperties
   validates :title, presence: { message: 'Your work must have a title.' }
+  contains "descMetadata", class_name: "ActiveFedora::File"
 end

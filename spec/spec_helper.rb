@@ -7,6 +7,7 @@ require 'rspec/rails'
 require 'equivalent-xml/rspec_matchers'
 require 'byebug' unless ENV['TRAVIS']
 
+require 'fedora_migrate_ac'
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
