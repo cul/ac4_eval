@@ -29,7 +29,8 @@ module SufiaEval
     config.active_record.raise_in_transactional_callbacks = true
     # Uncomment below if autoloading from lib is desirable
     # config.autoload_paths += Dir["#{config.root}/lib/**/*"]
-    config.autoload_paths << Rails.root.join('app','presenters')
+    config.autoload_paths << Rails.root.join('app', 'presenters')
+
     require 'sufia/redis_config'
 
     # testable override necessary pending https://github.com/cul/cul_omniauth/issues/2
