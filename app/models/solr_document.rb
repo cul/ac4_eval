@@ -26,4 +26,13 @@ class SolrDocument
   # Do content negotiation for AF models.
 
   use_extension(Hydra::ContentNegotiation)
+
+  def to_model
+    model = super
+    if model.respond_to? :ldp_source
+      model.ldp_source.instance_variable_set(:@head, {})
+      model.ldp_source.instance_variable_set(:@subject, RDF::URI(id)) unless model.persisted?
+    end
+    model
+  end
 end

@@ -3,8 +3,9 @@
 
 class CurationConcerns::GenericWorksController < ApplicationController
   include CurationConcerns::CurationConcernController
+
   # Adds Sufia behaviors to the controller.
   include Sufia::WorksControllerBehavior
 
-  self.curation_concern_type = GenericWork
+  self.show_presenter = ::AcademicCommons::WorkShowPresenter
 end
