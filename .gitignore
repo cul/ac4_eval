@@ -17,6 +17,8 @@
 /tmp
 
 /fcrepo4-data/*
+/fcrepo4-*-data
+/migration_report
 
 # these configurations are either generated or linked on deployment
 analytics.yml
@@ -25,6 +27,7 @@ cas.yml
 database.yml
 devise.yml
 fedora.yml
+fedora3.yml
 redis.yml
 role_map.yml
 secrets.yml

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount BrowseEverything::Engine => '/browse'
+
   mount Blacklight::Engine => '/'
 
   concern :searchable, Blacklight::Routes::Searchable.new
@@ -23,7 +25,6 @@ Rails.application.routes.draw do
   # This behavior seems to show up only in production mode.
   mount Sufia::Engine => '/'
 
-  mount Hydra::Collections::Engine => '/'
   mount CurationConcerns::Engine, at: '/'
   resources :welcome, only: 'index'
   root 'sufia/homepage#index'
