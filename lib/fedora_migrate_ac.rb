@@ -20,6 +20,7 @@ module FedoraMigrate
     end
     autoload :DescMetadataMover, 'fedora_migrate_ac/desc_metadata_mover'
     autoload :ListMigrator, 'fedora_migrate_ac/list_migrator'
+    autoload :ModsPropertyMover, 'fedora_migrate_ac/mods_property_mover'
     autoload :ObjectMover, 'fedora_migrate_ac/object_mover'
     autoload :OverrideTargetConstructor, 'fedora_migrate_ac/override_target_constructor'
     autoload :RelsExtDatastreamMover, 'fedora_migrate_ac/rels_ext_datastream_mover'

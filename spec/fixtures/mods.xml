@@ -1,0 +1,93 @@
+
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+    
+    <titleInfo>
+        <title>Looping Genomes: Diagnostic Change and the Genetic Makeup of the Autism Population</title>
+    </titleInfo>
+    <name type="personal">
+        <namePart type="family">Navon</namePart>
+        <namePart type="given">Daniel</namePart>
+        <role>
+            <roleTerm type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal" ID="ge2027">
+        <namePart type="family">Eyal</namePart>
+        <namePart type="given">Gil</namePart>
+        <role>
+            <roleTerm type="text">author</roleTerm>
+        </role>
+        <affiliation>Columbia University. Sociology</affiliation>
+    </name>
+    <name type="corporate">
+        <namePart>Columbia University. Sociology</namePart>
+        <role>
+            <roleTerm type="text">originator</roleTerm>
+        </role>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre>Articles</genre>
+    
+    <originInfo>
+        <dateIssued encoding="w3cdtf" keyDate="yes">2016</dateIssued>
+    </originInfo>
+    
+    <language>
+        <languageTerm type="text">English</languageTerm>
+    </language>
+    <abstract>This article builds on Hacking’s framework of “dynamic nominalism” to show how knowledge about biological etiology can interact with the “kinds of people” delineated by diagnostic categories in ways that “loop” or modify both over time. The authors use historical materials to show how “geneticization” played a crucial role in binding together autism as a biosocial community and how evidence from genetics research later made an important contribution to the diagnostic expansion of autism. In the second part of the article, the authors draw on quantitative and qualitative analyses of autism rates over time in several rare conditions that are delineated strictly according to genomic mutations in order to demonstrate that these changes in diagnostic practice helped to both increase autism’s prevalence and create its enormous genetic heterogeneity. Thus, a looping process that began with geneticization and involved the social effects of genetics research itself transformed the autism population and its genetic makeup.</abstract>
+    <subject>
+        <topic>Sociology</topic>
+    </subject>
+    <subject>
+        <topic>History of science</topic>
+    </subject>
+    <subject authority="fast" authorityURI="http://id.worldcat.org/fast/void/0.1" valueURI="http://id.worldcat.org/fast/822486">
+        <topic>Autism--Diagnosis</topic>
+    </subject>
+    <subject authority="fast" authorityURI="http://id.worldcat.org/fast/void/0.1" valueURI="http://id.worldcat.org/fast/822487">
+        <topic>Autism--Etiology</topic>
+    </subject>
+    <subject authority="fast" authorityURI="http://id.worldcat.org/fast/void/0.1" valueURI="http://id.worldcat.org/fast/1108336">
+        <topic>Science--Philosophy</topic>
+    </subject>
+    <subject authority="fast" authorityURI="http://id.worldcat.org/fast/void/0.1" valueURI="http://id.worldcat.org/fast/1108360">
+        <topic>Science--Social aspects</topic>
+    </subject>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>American Journal of Sociology</title>
+        </titleInfo>
+        <part>
+            <detail type="volume">
+                <number>121</number>
+            </detail>
+            <detail type="issue">
+                <number>5</number>
+            </detail>
+            <extent unit="page">
+                <start>1416</start>
+                <end>1471</end>
+            </extent>
+            <date>March 2016</date>
+        </part>
+        <identifier type="doi">10.1086/684201</identifier>
+        <identifier type="issn">1537-5390</identifier>
+    </relatedItem>
+    <identifier type="CDRS doi">http://dx.doi.org/10.7916/D8J1033X</identifier>
+    
+    <location>
+        <physicalLocation authority="marcorg">NNC</physicalLocation>
+    </location>
+    
+    <recordInfo>
+        <recordContentSource authority="marcorg">NNC</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2016-04-06 15:40:17 -0400</recordCreationDate>
+        <recordChangeDate encoding="w3cdtf">2016-04-06 16:11:20 -0400</recordChangeDate>
+        <recordIdentifier>23646</recordIdentifier>
+        <languageOfCataloging>
+            <languageTerm authority="iso639-2b">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    
+</mods>

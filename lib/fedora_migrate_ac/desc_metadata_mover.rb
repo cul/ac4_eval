@@ -13,6 +13,7 @@ module FedoraMigrate
       def self.source_for(object)
         enum = FedoraMigrate.source.connection.find_by_sparql sparql_query(object)
         obj = enum.first
+        return nil unless obj
         ds = obj.datastreams['CONTENT'] if obj.datastreams['CONTENT']
         ds unless ds.nil? || ds.new?
       end

@@ -25,6 +25,7 @@ module FedoraMigrate
           end
         end
         migrate_legacy_content
+        migrate_legacy_description
       end
 
       def migrate_legacy_content
@@ -32,6 +33,14 @@ module FedoraMigrate
         return unless source_ds && !source_ds.new?
         target.original_file = target.build_original_file
         mover = FedoraMigrate::DatastreamMover.new(source_ds, target.original_file)
+        save
+        mover.migrate
+      end
+
+      def migrate_legacy_description
+        source_ds = DescMetadataMover.source_for(source)
+        return unless source_ds && !source_ds.new?
+        mover = ModsPropertyMover.new(source_ds, target)
         save
         mover.migrate
       end
