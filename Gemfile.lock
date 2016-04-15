@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/projecthydra/sufia.git
-  revision: e62fbb134649ea84f253d925827410b1fa0a3904
+  revision: a0c6c9cbd00cd4a5be8a12270cded7258de05663
   branch: master
   specs:
     sufia (7.0.0.beta1)
@@ -30,7 +30,7 @@ GIT
       blacklight-gallery (~> 0.1)
       browse-everything (~> 0.10)
       carrierwave (~> 0.9)
-      curation_concerns (~> 0.12.0.pre1)
+      curation_concerns (~> 0.12.0.pre5)
       daemons (~> 1.1)
       font-awesome-rails (~> 4.2)
       google-api-client (~> 0.7, < 0.9)
@@ -227,7 +227,7 @@ GEM
       devise-guests (~> 0.3)
       omniauth-cas
       rails (~> 4.1)
-    curation_concerns (0.12.0.pre4)
+    curation_concerns (0.12.0.pre6)
       active-fedora (~> 9.9)
       active_attr
       active_fedora-noid (~> 1.0)
@@ -287,7 +287,7 @@ GEM
     fastercsv (1.5.5)
     fcrepo_wrapper (0.2.1)
       ruby-progressbar
-    font-awesome-rails (4.5.0.1)
+    font-awesome-rails (4.6.1.0)
       railties (>= 3.2, < 5.1)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
