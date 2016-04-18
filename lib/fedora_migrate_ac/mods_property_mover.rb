@@ -22,13 +22,19 @@ module FedoraMigrate
           target.title << title.text.strip
         end
         # grab the top-level dateIssued, this is a single-valued property
-        mods_xml.css("mods>originInfo>dateIssued[@encoding='w3cdtf']").each do |dateIssued|
-          target.date_issued = ModsPropertyMover.w3cdtf(dateIssued.text.strip)
+        mods_xml.css("mods>originInfo>dateIssued[@keyDate='yes']").each do |date_issued|
+          target.date_issued = ModsPropertyMover.w3cdtf(date_issued.text.strip)
         end
         # grab the top-level DOI identifiers for this multiple-value property
         target.identifier = []
+
         mods_xml.css("mods>identifier[@type='CDRS doi']").each do |identifier|
-          target.identifier = [identifier.text.strip]
+          target.doi = identifier.text.strip
+        end
+
+        target.issn = []
+        mods_xml.css("relatedItem[@type='series']>identifier[@type='issn']").each do |issn|
+          target.issn << issn.strip
         end
       end
     end

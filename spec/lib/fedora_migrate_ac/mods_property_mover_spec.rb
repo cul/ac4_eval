@@ -44,6 +44,7 @@ describe FedoraMigrate::AcademicCommons::ModsPropertyMover, type: :unit do
   it "assigns properties" do
     subject.migrate_rdf_triples
     expect(target.title).to eql(["Looping Genomes: Diagnostic Change and the Genetic Makeup of the Autism Population"])
+    expect(target.date_issued).to eql(Date.new(2016))
   end
   it "parses w3cdtf" do
     dt = described_class.w3cdtf("2000")

@@ -19,8 +19,11 @@ module FedoraMigrate
         SPARQL
     end
     autoload :DescMetadataMover, 'fedora_migrate_ac/desc_metadata_mover'
+    autoload :ListDescriber, 'fedora_migrate_ac/list_describer'
     autoload :ListMigrator, 'fedora_migrate_ac/list_migrator'
+    autoload :ListProcessor, 'fedora_migrate_ac/list_processor'
     autoload :ModsPropertyMover, 'fedora_migrate_ac/mods_property_mover'
+    autoload :ObjectDescriber, 'fedora_migrate_ac/object_describer'
     autoload :ObjectMover, 'fedora_migrate_ac/object_mover'
     autoload :OverrideTargetConstructor, 'fedora_migrate_ac/override_target_constructor'
     autoload :RelsExtDatastreamMover, 'fedora_migrate_ac/rels_ext_datastream_mover'
