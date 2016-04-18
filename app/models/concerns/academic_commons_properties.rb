@@ -17,10 +17,10 @@ module AcademicCommonsProperties
       ix.type :date
       ix.as :stored_sortable
     end
-    property :rioxx_funder_id, predicate: Rioxx::Terms.project, multiple: false do |ix|
+    property :rioxx_funder_id, predicate: Rioxx::Terms.funder_id, multiple: false do |ix|
       ix.as :stored_sortable
     end
-    property :rioxx_funder_name, predicate: Rioxx::Terms.project do |ix|
+    property :rioxx_funder_name, predicate: Rioxx::Terms.funder_name do |ix|
       ix.as :stored_searchable
     end
     property :rioxx_project, predicate: Rioxx::Terms.project, multiple: false do |ix|
