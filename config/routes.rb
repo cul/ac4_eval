@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  Hydra::BatchEdit.add_routes(self)
   mount BrowseEverything::Engine => '/browse'
 
   mount Blacklight::Engine => '/'
