@@ -13,8 +13,17 @@ module AcademicCommonsProperties
         ix.as :stored_searchable
       end
     end
+    property :format, predicate: ::RDF::DC.format, multiple: false do |ix|
+      ix.as :stored_sortable
+    end
     property :date_issued, predicate: ::RDF::DC.issued, multiple: false do |ix|
       ix.type :date
+      ix.as :stored_sortable
+    end
+    property :description, predicate: ::RDF::DC.description, multiple: false do |ix|
+      ix.as :stored_sortable
+    end
+    property :language, predicate: ::RDF::DC.language, multiple: false do |ix|
       ix.as :stored_sortable
     end
     property :rioxx_funder_id, predicate: Rioxx::Terms.funder_id, multiple: false do |ix|
@@ -25,6 +34,9 @@ module AcademicCommonsProperties
     end
     property :rioxx_project, predicate: Rioxx::Terms.project, multiple: false do |ix|
       ix.as :stored_sortable
+    end
+    property :resource_type, predicate: ::RDF::DC.type, multiple: false do |ix|
+      ix.as :stored_searchable
     end
   end
 end

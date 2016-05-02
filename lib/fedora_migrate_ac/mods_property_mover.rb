@@ -11,6 +11,7 @@ module FedoraMigrate
           Date.new(*parts)
         end
       end
+
       def mods_xml
         @mods_xml ||= Nokogiri::XML(source.content)
       end
@@ -36,8 +37,23 @@ module FedoraMigrate
         mods_xml.css("relatedItem[@type='series']>identifier[@type='issn']").each do |issn|
           target.issn << issn.strip
         end
+
+        mods_xml.css("abstract").each do |abstract|
+          target.description = abstract.text.strip
+        end
+
+        mods_xml.css("language>languageTerm").each do |language|
+          target.language = language.text.strip
+        end
+
+        mods_xml.css("typeOfResource").each do |format|
+          target.format = format.text.strip
+        end
+
+        mods_xml.css("genre").each do |genre|
+          target.resource_type = genre.text.strip
+        end
       end
     end
   end
 end
-

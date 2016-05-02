@@ -3,7 +3,7 @@ module AcademicCommons
   # necessarily meeting sufia's requirement that members
   # are always ordered
   class WorkShowPresenter < ::Sufia::WorkShowPresenter
-    delegate :date_issued, :doi, :isbn, :issn, to: :solr_document
+    delegate :date_issued, :doi, :isbn, :issn, :description, :subject, :language, :resource_type, to: :solr_document
 
     def file_set_presenters
       @file_set_presenters ||= member_presenters(file_set_ids.uniq)
