@@ -2,10 +2,8 @@ en:
   sufia:
     product_name:       "Academic Commons"
     product_twitter_handle: "@ResearchAtCU"
-    product_email: "AC@columbia.edu"
     institution_name:   "Columbia University"
     institution_name_full: "Columbia University in the City of New York"
-    cul_name: "Columbia University Library"
     sort_label: "Sort the listing of items"
     account_name:       "My Institution Account Id"
     account_label:      "User"

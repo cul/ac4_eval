@@ -1,1 +1,36 @@
 <h1>Privacy Policy</h1>
+<div class="row">
+<div class="col-xs-12 .col-sm-6 col-lg-8">          
+<p>Academic Commons complies with the Columbia University Libraries <a href="http://library.columbia.edu/about/policies/confidentiality.html" target="_blank">Confidentiality of Library Records Policy</a>. We will not share any information about your use of Academic Commons except as required by the Confidentiality policy, though we may save the information described below for an indefinite period.</p>
+
+<h2>Users</h2>
+
+<p>When you visit Academic Commons (<a href="http://academiccommons.columbia.edu" target="_blank">academiccommons.columbia.edu</a>), our system saves a record of your IP address. We do not intentionally record any information that identifies you.</p>
+
+<p>If you ask us a question via our <a href="" target="_blank">Contact Form</a> section or by emailing <a href="mailto:AC@columbia.edu">AC@columbia.edu</a>, we save the information you provide (for example: your email address).</p>
+
+<h2>Columbia Users</h2>
+<p>If you log in to Academic Commons using your Columbia UNI, our system retains a record of your session and of any statistical reports you create during that session.</p>
+
+<h3>Contributors</h3>
+<p>When you contribute materials to Academic Commons, a limited amount of identifying and contact information is collected during deposit and cataloging. This information may be consulted and used by repository staff in the course of repository operations. Some information associated with deposited items--such as author, UNI, title, and abstract--is included in the publicly available Academic Commons item record. </p>
+
+<h3>Google Analytics</h3>
+<p>We use <a href="http://www.google.com/analytics/" target="_blank">Google Analytics</a> to help us understand how Academic Commons is used and how we can improve user experience on the site. We may compile and distribute these usage statistics. Though Google Analytics does not collect personal identifying information, it does record your IP address and places a cookie in your browser so it can determine if you have previously visited Academic Commons. To learn more about how Google manages the data it collects, read Google’s <a href="" target="_blank">Privacy Policy</a>. To learn how to prevent Google Analytics from using your data, read about the Google Analytics <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Opt-out Browser Add-on</a>.</p>
+</div>
+<div class="col-xs-6 col-lg-4">
+<div class="list-group">
+  <%= link_to static_path(:terms) , class: "list-group-item" do %>
+  Terms of Use
+  <% end %>
+  <%= link_to static_path(:copyright) , class: "list-group-item" do %>
+  Copyright
+  <% end %>
+  <%= link_to static_path(:privacy_policy) , class: "list-group-item active" do %>
+  Privacy Policy
+  <% end %>
+  <%= link_to static_path(:collection_policy) , class: "list-group-item" do %>
+  Collection Policy
+  <% end %>
+</div>
+</div>

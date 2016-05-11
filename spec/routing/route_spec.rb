@@ -200,6 +200,10 @@ describe 'Routes', type: :routing do
       expect(get: '/versions').to route_to(controller: 'static', action: 'versions')
     end
 
+    it "routes to copyright" do
+      expect(get: '/copyright').to route_to(controller: 'static', action: 'copyright')
+    end
+
     it "*not*s route a bogus static page" do
       expect(get: '/awesome').not_to route_to(controller: 'static', action: 'awesome')
     end

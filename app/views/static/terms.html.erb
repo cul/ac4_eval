@@ -1,4 +1,7 @@
+
 <h1>Terms of Use</h1>
+<div class="row">
+<div class="col-xs-12 .col-sm-6 col-lg-8">
 
 <p>By using <%= application_name %> (academiccommons.columbia.edu) or any of its content, you agree to accept and be bound by the following Terms of Use.</p>
 <ol>
@@ -9,3 +12,20 @@
 <li><b>Bibliographic Metadata</b>: Academic Commons bibliographic metadata--excluding abstracts, which may be subject to copyright--is available under a CC0 waiver. To the extent possible under law, Columbia University Academic Commons has waived all copyright and related or neighboring rights to Academic Commons bibliographic metadata. This work is published from: United States. Learn more here: [LINK TO INFO ON OAI_PMH]</li>
 <li><b>Indemnity</b>: ?
 </ol>
+</div>
+<div class="col-xs-6 col-lg-4">
+<div class="list-group">
+  <%= link_to static_path(:terms) , class: "list-group-item active" do %>
+  Terms of Use
+  <% end %>
+  <%= link_to static_path(:copyright) , class: "list-group-item" do %>
+  Copyright
+  <% end %>
+  <%= link_to static_path(:privacy_policy) , class: "list-group-item" do %>
+  Privacy Policy
+  <% end %>
+  <%= link_to static_path(:collection_policy) , class: "list-group-item" do %>
+  Collection Policy
+  <% end %>
+</div>
+</div>
