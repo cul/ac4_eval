@@ -16,5 +16,13 @@ module AcademicCommons
     def issn
       self[Solrizer.solr_name('issn')]
     end
+
+    def location
+      self[Solrizer.solr_name('location')]
+    end
+
+    def part_of
+      self[Solrizer.solr_name('part_of')]
+    end
   end
 end

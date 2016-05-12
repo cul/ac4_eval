@@ -35,7 +35,19 @@ module AcademicCommonsProperties
     property :rioxx_project, predicate: Rioxx::Terms.project, multiple: false do |ix|
       ix.as :stored_sortable
     end
-    property :resource_type, predicate: ::RDF::DC.type, multiple: false do |ix|
+    property :genre, predicate: ::RDF::DC.type, multiple: false do |ix|
+      ix.as :stored_searchable
+    end
+    property :location, predicate: ::RDF::DC.spatial, multiple: false do |ix|
+      ix.as :stored_searchable
+    end
+    property :part_of, predicate: ::RDF::DC.isPartOf, multiple: false do |ix|
+      ix.as :stored_searchable
+    end
+    property :contributor, predicate: ::RDF::DC.contributor, multiple: true do |ix|
+      ix.as :stored_searchable
+    end
+    property :subject, predicate: ::RDF::DC.subject, multiple: true do |ix|
       ix.as :stored_searchable
     end
   end

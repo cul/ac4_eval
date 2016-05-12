@@ -51,7 +51,25 @@ module FedoraMigrate
         end
 
         mods_xml.css("genre").each do |genre|
-          target.resource_type = genre.text.strip
+          target.genre = genre.text.strip
+        end
+
+        mods_xml.css("location>physicalLocation").each do |location|
+          target.location = location.text.strip
+        end
+
+        mods_xml.css("relatedItem[@type='host']>identifier[@type='issn']").each do |part_of|
+          target.part_of = part_of.text.strip
+        end
+
+        target.contributor = []
+        mods_xml.css("mods>name[@type='personal']").each do |author|
+          target.contributor << (author.css("namePart[@type='family']").text + ", " + author.css("namePart[@type='given']").text)
+        end
+
+        target.subject = []
+        mods_xml.css("mods>subject>topic").each do |subject|
+          target.subject << subject.text.strip
         end
       end
     end
