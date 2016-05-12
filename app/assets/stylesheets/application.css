@@ -14,3 +14,39 @@
  *= require_self
  *= require sufia
  */
+
+h1 {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.cul-banner {
+	background: #002D63;
+	color: #fff;
+	padding: 8px 15px 6px 15px;
+}
+
+.cul-banner svg {
+	height: auto;
+	width: 280px;
+}
+
+#masthead {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 18px 15px 13px 15px;
+}
+
+#masthead svg {
+	height: auto;
+    width: 560px;
+}
+
+.navbar-brand {
+	float: none;
+	height: auto;
+	line-height: 1;
+    margin: 0;
+    padding: 0;
+}
