@@ -1,5 +1,6 @@
 /* ac4 styles */
 
+/* top banner */
 
 h1 {
 	position: absolute;
@@ -14,7 +15,7 @@ h1 {
 }
 
 .cul-banner svg {
-	height: auto;
+    height: auto;
 	width: 280px;
 }
 
@@ -35,4 +36,49 @@ h1 {
 	line-height: 1;
 	margin: 0;
 	padding: 0;
+}
+
+/* footer */
+
+#footer.navbar-inverse {
+	background: #ddd;
+	border: 0;
+	border-radius: 0;
+	line-height: 1.5;
+}
+
+#footer .container {
+	padding-bottom: 30px;
+	padding-top: 30px;
+	max-width: 970px;
+}
+
+#footer h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 25px 0;
+}
+
+#footer ul {
+	margin: 0;
+	padding: 0;
+}
+
+#footer li {
+	list-style: none;
+}
+
+#footer .logo {
+	margin-bottom: 25px;
+	max-width: 80px;
+}
+
+#footer .logo img {
+	max-width: 100%;
+}
+
+#footer .cul-footer {
+	background: #002D63;
+	padding: 10px;
+	text-align: center;
 }
