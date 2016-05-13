@@ -41,10 +41,13 @@ h1 {
 /* footer */
 
 #footer.navbar-inverse {
-	background: #ddd;
+	background: #e5e5e5;
 	border: 0;
 	border-radius: 0;
+	color: #555;
 	line-height: 1.5;
+	margin-bottom: 0;
+	text-align: left;
 }
 
 #footer .container {
@@ -79,6 +82,7 @@ h1 {
 
 #footer .cul-footer {
 	background: #002D63;
+	color: #fff;
 	padding: 10px;
 	text-align: center;
 }
