@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :sessions, controller: 'users/sessions'
 
-get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|mendeley|copyright|collection_policy|privacy_policy|agreement|subject_libraries|versions/ }, as: :static
+get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|mendeley|copyright|content_policy|privacy_policy|agreement|subject_libraries|versions/ }, as: :static
 
   Hydra::BatchEdit.add_routes(self)
   # This must be the very last route in the file because it has a catch-all route for 404 errors.
