@@ -1,0 +1,88 @@
+/* ac4 styles */
+
+/* top banner */
+
+h1 {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.cul-banner {
+	background: #002D63;
+	color: #fff;
+	padding: 8px 15px 6px 15px;
+}
+
+.cul-banner svg {
+    height: auto;
+	width: 280px;
+}
+
+#masthead {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 18px 15px 13px 15px;
+}
+
+#masthead svg {
+	height: auto;
+	width: 560px;
+}
+
+.navbar-brand {
+	float: none;
+	height: auto;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+
+/* footer */
+
+#footer.navbar-inverse {
+	background: #e5e5e5;
+	border: 0;
+	border-radius: 0;
+	color: #555;
+	line-height: 1.5;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+#footer .container {
+	padding-bottom: 30px;
+	padding-top: 30px;
+	max-width: 970px;
+}
+
+#footer h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 25px 0;
+}
+
+#footer ul {
+	margin: 0;
+	padding: 0;
+}
+
+#footer li {
+	list-style: none;
+}
+
+#footer .logo {
+	margin-bottom: 25px;
+	max-width: 80px;
+}
+
+#footer .logo img {
+	max-width: 100%;
+}
+
+#footer .cul-footer {
+	background: #002D63;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
