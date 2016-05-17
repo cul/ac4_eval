@@ -74,7 +74,7 @@ task clean: :id_migrators do
 end
 
 namespace :mods do
-desc "Run the MODS migration to properties"
+  desc "Run the MODS migration to properties"
   task list: :id_migrators do
     list = ENV['list']
     unless list && File.exists?(list)
@@ -89,7 +89,7 @@ desc "Run the MODS migration to properties"
 end
 
 namespace :migrate do
-desc "Run my migrations"
+  desc "Run my migrations"
   task list: :id_migrators do
     list = ENV['list']
     unless list && File.exists?(list)

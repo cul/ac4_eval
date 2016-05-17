@@ -1,6 +1,5 @@
 module AcademicCommons
   module SolrDocumentBehavior
-
     def date_issued
       date_field('date_issued')
     end
