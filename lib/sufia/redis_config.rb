@@ -1,5 +1,5 @@
 require 'redis'
-# require 'redis-namespace'
+require 'redis-namespace'
 module Sufia
   module RedisConfig
     REDIS_CONFIG_PATH = File.join(Rails.root, 'config', 'redis.yml')
