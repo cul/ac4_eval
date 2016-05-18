@@ -18,11 +18,13 @@
 
 <h3>Google Analytics</h3>
 <p>We use <a href="http://www.google.com/analytics/" target="_blank">Google Analytics</a> to help us understand how Academic Commons is used and how we can improve user experience on the site. We may compile and distribute these usage statistics. Though Google Analytics does not collect personal identifying information, it does record your IP address and places a cookie in your browser so it can determine if you have previously visited Academic Commons. To learn more about how Google manages the data it collects, read Google’s <a href="" target="_blank">Privacy Policy</a>. To learn how to prevent Google Analytics from using your data, read about the Google Analytics <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Opt-out Browser Add-on</a>.</p>
+<p>If you have comments or questions about Academic Commons, please 
+contact the Academic Commons staff at <a href="mailto:AC@columbia.edu">AC@columbia.edu</a>.</p>
 </div>
 <div class="col-xs-6 col-lg-4">
 <div class="list-group">
-  <%= link_to static_path(:terms) , class: "list-group-item" do %>
-  Terms of Use
+  <%= link_to static_path(:content_policies) , class: "list-group-item" do %>
+  Content Policies
   <% end %>
   <%= link_to static_path(:copyright) , class: "list-group-item" do %>
   Copyright
@@ -30,8 +32,8 @@
   <%= link_to static_path(:privacy_policy) , class: "list-group-item active" do %>
   Privacy Policy
   <% end %>
-  <%= link_to static_path(:collection_policy) , class: "list-group-item" do %>
-  Collection Policy
+  <%= link_to static_path(:terms) , class: "list-group-item" do %>
+  Terms of Use
   <% end %>
 </div>
 </div>

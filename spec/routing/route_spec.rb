@@ -204,6 +204,14 @@ describe 'Routes', type: :routing do
       expect(get: '/copyright').to route_to(controller: 'static', action: 'copyright')
     end
 
+    it "routes to content_policies" do
+      expect(get: '/content_policies').to route_to(controller: 'static', action: 'content_policies')
+    end
+
+    it "routes to privacy_policy" do
+      expect(get: '/privacy_policy').to route_to(controller: 'static', action: 'privacy_policy')
+    end
+
     it "*not*s route a bogus static page" do
       expect(get: '/awesome').not_to route_to(controller: 'static', action: 'awesome')
     end
