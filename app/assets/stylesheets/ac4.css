@@ -41,25 +41,15 @@ h1 {
 /* footer */
 
 #footer.navbar-inverse {
-	background: #e5e5e5;
+	background: #fff;
 	border: 0;
+	border-bottom: 10px solid #ccc;
+	border-top: 1px solid #ccc;
 	border-radius: 0;
 	color: #555;
 	line-height: 1.5;
 	margin-bottom: 0;
 	text-align: left;
-}
-
-#footer .container {
-	padding-bottom: 30px;
-	padding-top: 30px;
-	max-width: 970px;
-}
-
-#footer h3 {
-	font-size: 18px;
-	font-weight: normal;
-	margin: 0 0 25px 0;
 }
 
 #footer ul {
@@ -68,21 +58,40 @@ h1 {
 }
 
 #footer li {
+	display: inline;
 	list-style: none;
 }
 
-#footer .logo {
-	margin-bottom: 25px;
-	max-width: 80px;
+#footer .footer-box,
+#footer .footer-box-info,
+#footer .footer-box-contact {
+	padding-bottom: 25px;
+	padding-top: 25px;
 }
 
-#footer .logo img {
-	max-width: 100%;
+#footer .footer-box-info {
+	line-height: 2;
 }
 
-#footer .cul-footer {
-	background: #002D63;
-	color: #fff;
-	padding: 10px;
-	text-align: center;
+#footer .footer-box-info li {
+	color: #bbb;
+}
+
+#footer .footer-box-contact {
+	padding: 25px 0 15px 0;
+}
+
+#footer .footer-box-contact ul {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+#footer .footer-box-contact li {
+	display: block;
+	line-height: 2;
+	text-align: left;
+}
+
+#footer .footer-box-contact i {
+	min-width: 15px;
 }
