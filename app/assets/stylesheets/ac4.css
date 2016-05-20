@@ -8,17 +8,6 @@ h1 {
 	left: -9999px;
 }
 
-.cul-banner {
-	background: #002D63;
-	color: #fff;
-	padding: 8px 15px 6px 15px;
-}
-
-.cul-banner svg {
-    height: auto;
-	width: 280px;
-}
-
 #masthead {
 	background-color: #fff;
 	border-bottom: 1px solid #ddd;
