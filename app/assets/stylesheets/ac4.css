@@ -16,7 +16,11 @@ h1 {
 
 #masthead svg {
 	height: auto;
-	width: 560px;
+	width: 100%;
+}
+
+.navbar-header {
+	max-width: 560px;
 }
 
 .navbar-brand {
