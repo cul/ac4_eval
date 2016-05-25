@@ -13,6 +13,9 @@ module AcademicCommonsProperties
         ix.as :stored_searchable
       end
     end
+    property :format, predicate: ::RDF::DC.format, multiple: false do |ix|
+      ix.as :stored_sortable
+    end
     property :date_issued, predicate: ::RDF::DC.issued, multiple: false do |ix|
       ix.type :date
       ix.as :stored_sortable
@@ -25,6 +28,9 @@ module AcademicCommonsProperties
     end
     property :rioxx_project, predicate: Rioxx::Terms.project, multiple: false do |ix|
       ix.as :stored_sortable
+    end
+    property :location, predicate: ::RDF::DC.spatial, multiple: false do |ix|
+      ix.as :stored_searchable
     end
   end
 end
