@@ -47,6 +47,10 @@ Rails.application.routes.draw do
 
   mount Sufia::Engine => '/'
 
+  # StaticController is defined in Sufia
+  # we map the route here to keep the Sufia engine from overriding
+  get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|mendeley|agreement|subject_libraries|versions|copyright|content_policies|privacy_policy/ }, as: :static
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
