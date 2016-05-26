@@ -21,8 +21,6 @@ Rails.application.routes.draw do
 
   resources :sessions, controller: 'users/sessions'
 
-get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|mendeley|copyright|content_policies|privacy_policy|agreement|subject_libraries|versions/ }, as: :static
-
   Hydra::BatchEdit.add_routes(self)
   # This must be the very last route in the file because it has a catch-all route for 404 errors.
   # This behavior seems to show up only in production mode.
@@ -48,6 +46,10 @@ get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|men
   end
 
   mount Sufia::Engine => '/'
+
+  # StaticController is defined in Sufia
+  # we map the route here to keep the Sufia engine from overriding
+  get ':action' => 'static#:action', constraints: { action: /help|terms|zotero|mendeley|agreement|subject_libraries|versions|copyright|content_policies|privacy_policy/ }, as: :static
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

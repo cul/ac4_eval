@@ -180,6 +180,8 @@ describe 'Routes', type: :routing do
   end
 
   describe "Static Pages" do
+    routes { Rails.application.routes }
+
     it "routes to help" do
       expect(get: '/help').to route_to(controller: 'static', action: 'help')
     end

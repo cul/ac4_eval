@@ -19,6 +19,8 @@ Metrics/LineLength:
   Enabled: true
   Max: 100
   Exclude:
+    - 'config/routes.rb'
+    - 'spec/routing/**/*'
     # only because the solr name generators are very long-named
     - 'app/controllers/catalog_controller.rb'
 
