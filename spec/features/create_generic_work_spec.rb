@@ -9,7 +9,7 @@ feature 'Create a GenericWork' do
       { email: 'test@example.com' }
     end
     let(:user) do
-      User.new(user_attributes) { |u| u.save(validate: false) }
+      User.find_or_create_by(user_attributes)
     end
 
     before do
@@ -17,8 +17,11 @@ feature 'Create a GenericWork' do
     end
 
     scenario do
+      skip "This is skipped in sufia "
+
       visit new_curation_concerns_generic_work_path
       fill_in 'Title', with: 'Test GenericWork'
+      puts page.body
       click_button 'Create GenericWork'
       expect(page).to have_content 'Test GenericWork'
     end
