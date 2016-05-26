@@ -50,12 +50,13 @@ class CatalogController < ApplicationController
     #   The ordering of the field names is the order of the display
     config.add_facet_field solr_name("resource_type", :facetable), label: "Genre", limit: 5
     config.add_facet_field solr_name("creator", :facetable), label: "Creator", limit: 5
+    config.add_facet_field solr_name("contributor", :facetable), label: "Contributor", limit: 5
     config.add_facet_field solr_name("tag", :facetable), label: "Keyword", limit: 5
-    config.add_facet_field solr_name("subject", :facetable), label: "Subject", limit: 5
-    config.add_facet_field solr_name("language", :facetable), label: "Language", limit: 5
-    config.add_facet_field solr_name("based_near", :facetable), label: "Location", limit: 5
-    config.add_facet_field solr_name("publisher", :facetable), label: "Publisher", limit: 5
-    config.add_facet_field solr_name("file_format", :facetable), label: "File Format", limit: 5
+    # config.add_facet_field solr_name("subject", :facetable), label: "Subject", limit: 5
+    # config.add_facet_field solr_name("language", :facetable), label: "Language", limit: 5
+    # config.add_facet_field solr_name("based_near", :facetable), label: "Location", limit: 5
+    # config.add_facet_field solr_name("publisher", :facetable), label: "Publisher", limit: 5
+    # config.add_facet_field solr_name("file_format", :facetable), label: "File Format", limit: 5
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -65,21 +66,21 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field solr_name("title", :stored_searchable), label: "Title", itemprop: 'name'
-    config.add_index_field solr_name("description", :stored_searchable), label: "Description", itemprop: 'description'
-    config.add_index_field solr_name("tag", :stored_searchable), label: "Keyword", itemprop: 'keywords'
-    config.add_index_field solr_name("subject", :stored_searchable), label: "Subject", itemprop: 'about'
-    config.add_index_field solr_name("creator", :stored_searchable), label: "Creator", itemprop: 'creator'
+    # config.add_index_field solr_name("description", :stored_searchable), label: "Description", itemprop: 'description'
+    # config.add_index_field solr_name("tag", :stored_searchable), label: "Keyword", itemprop: 'keywords'
+    # config.add_index_field solr_name("subject", :stored_searchable), label: "Subject", itemprop: 'about'
+    # config.add_index_field solr_name("creator", :stored_searchable), label: "Creator", itemprop: 'creator'
     config.add_index_field solr_name("contributor", :stored_searchable), label: "Contributor", itemprop: 'contributor'
-    config.add_index_field solr_name("publisher", :stored_searchable), label: "Publisher", itemprop: 'publisher'
-    config.add_index_field solr_name("based_near", :stored_searchable), label: "Location", itemprop: 'contentLocation'
-    config.add_index_field solr_name("language", :stored_searchable), label: "Language", itemprop: 'inLanguage'
-    config.add_index_field solr_name("date_uploaded", :stored_searchable), label: "Date Uploaded", itemprop: 'datePublished'
-    config.add_index_field solr_name("date_modified", :stored_searchable), label: "Date Modified", itemprop: 'dateModified'
-    config.add_index_field solr_name("date_created", :stored_searchable), label: "Date Created", itemprop: 'dateCreated'
-    config.add_index_field solr_name("rights", :stored_searchable), label: "Rights"
+    # config.add_index_field solr_name("publisher", :stored_searchable), label: "Publisher", itemprop: 'publisher'
+    # config.add_index_field solr_name("based_near", :stored_searchable), label: "Location", itemprop: 'contentLocation'
+    # config.add_index_field solr_name("language", :stored_searchable), label: "Language", itemprop: 'inLanguage'
+    config.add_index_field solr_name("date_issued", :stored_sortable, type: :date), label: "Date Issued", itemprop: 'dateIssued'    # config.add_index_field solr_name("date_uploaded", :stored_searchable), label: "Date Uploaded", itemprop: 'datePublished'
+    # config.add_index_field solr_name("date_modified", :stored_searchable), label: "Date Modified", itemprop: 'dateModified'
+    # config.add_index_field solr_name("date_created", :stored_searchable), label: "Date Created", itemprop: 'dateCreated'
+    # config.add_index_field solr_name("rights", :stored_searchable), label: "Rights"
     config.add_index_field solr_name("resource_type", :stored_searchable), label: "Genre"
-    config.add_index_field solr_name("format", :stored_searchable), label: "File Format"
-    config.add_index_field solr_name("identifier", :stored_searchable), label: "Identifier"
+    # config.add_index_field solr_name("format", :stored_searchable), label: "File Format"
+    # config.add_index_field solr_name("identifier", :stored_searchable), label: "Identifier"
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
