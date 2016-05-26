@@ -1,7 +1,7 @@
 module FedoraMigrate
   module AcademicCommons
     class ListDescriber < FedoraMigrate::AcademicCommons::ListProcessor
-      def object_mover(source, target=nil)
+      def object_mover(source, target = nil)
         FedoraMigrate::AcademicCommons::ObjectDescriber.new(source, target, options)
       end
 

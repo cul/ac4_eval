@@ -15,26 +15,24 @@ class DownloadsController < ApplicationController
       @headers = headers
     end
 
-    def each(no_of_requests_limit = 3, &block)
-      raise ArgumentError, 'HTTP redirect too deep' if no_of_requests_limit == 0
-      len = 0
-      Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
-        request = Net::HTTP::Get.new uri, headers
-        http.request request do |response|
-          case response
-          when Net::HTTPSuccess
-            response.read_body do |chunk|
-              yield chunk
-            end
-          when Net::HTTPRedirection
-            no_of_requests_limit -= 1
-            @uri = URI(response["location"])
-            each(no_of_requests_limit, &block)
-          else
-            raise "Couldn't get data from Fedora (#{uri}). Response: #{response.code}"
-          end
-        end
+    def each(no_of_requests_limit = 3)
+      Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+        response = get_response(http, no_of_requests_limit)
+        response.read_body { |chunk| yield chunk } if block_given?
       end
+    end
+
+    def get_response(http, no_of_requests_limit)
+      raise ArgumentError, 'HTTP redirect too deep' if no_of_requests_limit < 1
+      result = nil
+      http.request Net::HTTP::Get.new(uri, headers) do |response|
+        result = response if response.is_a?(Net::HTTPSuccess)
+        unless result || response.is_a?(Net::HTTPRedirection)
+          raise "Couldn't get data from Fedora (#{uri}). Response: #{response.code}"
+        end
+        @uri = URI(response["location"])
+      end
+      result || get_response(http, no_of_requests_limit - 1)
     end
   end
 end

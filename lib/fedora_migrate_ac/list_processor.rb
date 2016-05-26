@@ -26,7 +26,7 @@ module FedoraMigrate
         report.save(source.pid, result)
       end
 
-      def object_mover(source, target=nil)
+      def object_mover(_source, _target = nil)
         raise "Unimplemented: override object_mover in a subclass"
       end
     end

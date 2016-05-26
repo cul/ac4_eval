@@ -34,7 +34,7 @@ describe FedoraMigrate::AcademicCommons::ModsPropertyMover, type: :unit do
     source
   end
   let(:target) do
-    target = stub_model(GenericWork)
+    stub_model(GenericWork)
   end
   let(:options) { Hash.new }
   before do
@@ -43,7 +43,9 @@ describe FedoraMigrate::AcademicCommons::ModsPropertyMover, type: :unit do
   subject { described_class.new(source, target, options) }
   it "assigns properties" do
     subject.migrate_rdf_triples
-    expect(target.title).to eql(["Looping Genomes: Diagnostic Change and the Genetic Makeup of the Autism Population"])
+    expect(target.title).to eql(
+      ["Looping Genomes: Diagnostic Change and the Genetic Makeup of the Autism Population"]
+    )
     expect(target.date_issued).to eql(Date.new(2016))
   end
   it "parses w3cdtf" do
