@@ -3,21 +3,21 @@
 		<div class="row">
 			<div class="col-md-8 footer-box-info">
 				<ul>
-					<li><a href="">Content Policies</a> |</li>
-					<li><a href="">Copyright</a> |</li>
-					<li><a href="">Privacy Policy</a> |</li>
-					<li><a href="">Terms of Use</a></li>
+					<li><%= link_to "Content Policies", static_path(:content_policies) %> |</li>
+					<li><%= link_to "Copyright", static_path(:copyright) %> |</li>
+					<li><%= link_to "Privacy Policy ", static_path(:privacy_policy) %> |</li>
+					<li><%= link_to "Terms of Use", static_path(:terms) %></li>
 				</ul>
 				A program of <a href="http://cdrs.columbia.edu/">Center for Digital Research and Scholarship</a>, <a href="http://library.columbia.edu/">Columbia University Libraries</a>
 			</div>
 			<div class="col-md-4 footer-box-contact">
 				<ul>
-					<li><i class="fa fa-twitter"></i> <a href="">@ResearchAtCU</a></li>
-					<li><i class="fa fa-envelope-o"></i> <a href="">AC@columbia.edu</a></li>
+					<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/ResearchAtCU" target="_blank">@ResearchAtCU</a></li>
+					<li><i class="fa fa-envelope-o"></i> <a href="mailto:AC@columbia.edu">AC@columbia.edu</a></li>
 				</ul>
 				<ul>
-					<li><i class="fa fa-phone"></i> (212) 851-2856</li>
-					<li><i class="fa fa-list-alt"></i> <a href="">Contact form</a></li>
+					<li><i class="fa fa-phone"></i> <a href="tel:+1-212-851-2856">(212) 851-2856</a></li>
+					<li><i class="fa fa-list-alt"></i> <a href="<%= sufia.contact_path %>">Contact Form</a></li>
 				</ul>
 			</div>
 		</div>
