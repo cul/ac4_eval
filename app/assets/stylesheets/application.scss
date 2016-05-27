@@ -21,7 +21,45 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen",  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-/* top banner */
+/* cul banner */
+
+.cul-banner {
+	background: #002D63;
+	color: #fff;
+	padding: 7px 20px 10px 20px;
+
+	& a {
+		color: #fff;
+	}
+
+	& a:hover {
+		text-decoration: none;
+	}
+
+	& .cul-crown,
+	& .cul-logo {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+
+	& .cul-crown {
+		margin-right: 3px;
+		width: 19px;
+	}
+
+	& .cul-crown img {
+		height: auto;
+		width: 100%;
+	}
+
+	& .cul-logo {
+		font-family: 'trajan pro', georgia, serif;
+		font-size: 16px;
+		line-height: 56%;
+	}
+}
+
+/* logo */
 
 a#logo h1 {
 	position: absolute;
@@ -32,12 +70,12 @@ a#logo h1 {
 #masthead {
 	background-color: #fff;
 	border-bottom: 1px solid #ddd;
-	padding: 18px 15px 13px 15px;
-}
+	padding: 12px 15px 6px 15px;
 
-#masthead svg {
-	height: auto;
-	width: 100%;
+	& svg {
+		height: auto;
+		width: 100%;
+	}
 }
 
 .navbar-header {
