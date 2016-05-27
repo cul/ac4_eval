@@ -53,10 +53,19 @@ body {
 	}
 
 	& .cul-logo {
-		font-family: 'trajan pro', georgia, serif;
+		font-family: 'trajan-pro-3', georgia, serif;
 		font-size: 16px;
-		line-height: 56%;
+		line-height: 70%;
 	}
+}
+
+/* fixes typekit flash of unstyled text */
+
+.wf-loading .cul-logo  {
+	visibility: hidden;
+}
+.wf-active .cul-logo  {
+	visibility: visible;
 }
 
 /* logo */
