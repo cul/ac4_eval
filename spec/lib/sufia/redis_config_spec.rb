@@ -34,7 +34,7 @@ describe Sufia::RedisConfig, type: :unit do
         redis = double('Redis')
         expect(Redis).to receive(:new).with(redis_config).and_return(redis)
         described_class.configure(config_path)
-        expect(Redis.current.namespace).to eql(Sufia::RedisConfig::REDIS_NAMESPACE)
+        expect(Redis.current.namespace).to eql(Sufia.config.redis_namespace)
       end
     end
   end

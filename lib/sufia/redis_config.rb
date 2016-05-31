@@ -4,7 +4,6 @@ module Sufia
   module RedisConfig
     REDIS_CONFIG_PATH = File.join(Rails.root, 'config', 'redis.yml')
     REDIS_DEFAULT_CONFIG = { thread_safe: true }.freeze
-    REDIS_NAMESPACE = "#{CurationConcerns.config.redis_namespace}:#{Rails.env}".freeze
     # Parses the YAML configuration and reverse-merges with defaults
     def self.configuration(path)
       config = YAML.load(ERB.new(IO.read(path || REDIS_CONFIG_PATH)).result)[Rails.env]
@@ -31,13 +30,9 @@ module Sufia
       config = configuration(path)
 
       disconnect_current!
-      Redis.current = begin
-        redis = Redis::Namespace.new(REDIS_NAMESPACE, redis: Redis.new(config))
-      rescue
-        redis = nil
-      end
-      # global assign necessary pending projecthydra/sufia/issues/1599
-      $redis = redis
+      Redis.current = Redis::Namespace.new(Sufia.config.redis_namespace, redis: Redis.new(config))
+    rescue StandardError
+      Redis.current = nil
     end
   end
 end
