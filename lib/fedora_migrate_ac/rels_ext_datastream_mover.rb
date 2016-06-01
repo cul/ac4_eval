@@ -8,12 +8,6 @@ module FedoraMigrate
 
       delegate :statements, to: :graph
 
-      def migrate
-        migrate_statements
-        target.save
-        super
-      end
-
       def statement?(stmt)
         !IGNORE.include?(stmt.predicate)
       end
