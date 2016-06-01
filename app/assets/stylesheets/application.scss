@@ -37,7 +37,6 @@ body {
 	color: #fff;
 	padding: 8px 0 17px 0;
 
-
 	& a {
 		color: #fff;
 	}
@@ -96,9 +95,16 @@ body {
 	& h1 {
 		font-family: 'trajan-pro-3';
 		font-size: 1em;
+		font-weight: 300;
 		letter-spacing: -1px;
 		margin: 15px 0 0 15px;
 		white-space: nowrap;
+	}
+
+	& span.columbia,
+	& span.pipe,
+	& span.ac {
+		display: inline-block;
 	}
 
 	& span.columbia {
@@ -107,7 +113,8 @@ body {
 
 	& span.pipe {
 		color: lighten($color-cul-light,20%);
-		margin: 0 -4px;
+		margin: -4px -4px 0 -4px;
+		vertical-align: middle;
 	}
 
 	& span.ac {
@@ -300,8 +307,7 @@ body {
 	}
 
 	& span.pipe {
-		color: lighten($color-cul-light,20%);
-		margin: 0 -8px;
+		margin: -8px -8px 0 -8px;
 	}
 }
 
