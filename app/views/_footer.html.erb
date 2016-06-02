@@ -3,10 +3,10 @@
 		<div class="row">
 			<div class="col-md-8 footer-box-info">
 				<ul>
-					<li><%= link_to "Content Policies", static_path(:content_policies) %> |</li>
-					<li><%= link_to "Copyright", static_path(:copyright) %> |</li>
-					<li><%= link_to "Privacy Policy ", static_path(:privacy_policy) %> |</li>
-					<li><%= link_to "Terms of Use", static_path(:terms) %></li>
+					<li><%= link_to "Content Policies", Rails.application.routes.url_helpers.static_path(:content_policies) %> |</li>
+					<li><%= link_to "Copyright", Rails.application.routes.url_helpers.static_path(:copyright) %> |</li>
+					<li><%= link_to "Privacy Policy ", Rails.application.routes.url_helpers.static_path(:privacy_policy) %> |</li>
+					<li><%= link_to "Terms of Use", Rails.application.routes.url_helpers.static_path(:terms) %></li>
 				</ul>
 				A program of <a href="http://cdrs.columbia.edu/">Center for Digital Research and Scholarship</a>, <a href="http://library.columbia.edu/">Columbia University Libraries</a>
 			</div>
