@@ -21,11 +21,15 @@
 
 $color-cul-dark: #002D63;
 $color-cul-light: #4A90E2;
+$color-text: #333;
+$color-text-light: #999;
+$border: 1px solid #e3e3e3;
 
 /* general styles */
 
 body {
 	background: #fff;
+	color: $color-text;
 	font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen",  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	padding-top: 45px;
 }
@@ -81,7 +85,6 @@ body {
 
 #masthead {
 	background-color: #fff;
-	border-bottom: 1px solid #ddd;
 	padding: 5px 0;
 
 	& .navbar-brand {
@@ -144,14 +147,14 @@ body {
 		linear,
 		left top,
 		left bottom,
-		color-stop(0, #418AD9),
-		color-stop(1, #33679E)
+		color-stop(0, #5A98DB),
+		color-stop(1, #366CA3)
 	);
-	background-image: -o-linear-gradient(bottom, #418AD9 0%, #33679E 100%);
-	background-image: -moz-linear-gradient(bottom, #418AD9 0%, #33679E 100%);
-	background-image: -webkit-linear-gradient(bottom, #418AD9 0%, #33679E 100%);
-	background-image: -ms-linear-gradient(bottom, #418AD9 0%, #33679E 100%);
-	background-image: linear-gradient(to bottom, #418AD9 0%, #33679E 100%);
+	background-image: -o-linear-gradient(bottom, #5A98DB 0%, #366CA3 100%);
+	background-image: -moz-linear-gradient(bottom, #5A98DB 0%, #366CA3 100%);
+	background-image: -webkit-linear-gradient(bottom, #5A98DB 0%, #366CA3 100%);
+	background-image: -ms-linear-gradient(bottom, #5A98DB 0%, #366CA3 100%);
+	background-image: linear-gradient(to bottom, #5A98DB 0%, #366CA3 100%);
 
   border: 0;
   margin: -20px -15px 0 -15px;
@@ -203,7 +206,7 @@ body {
 	& h3 {
 		font-weight: 300;
 		letter-spacing: 1px;
-		margin: 0;
+		margin: 0 0 40px 0;
 	}
 
 	& h3 {
@@ -211,19 +214,24 @@ body {
 	}
 
 	& .quotes p {
-		background: #f5f5f5;
 		border-radius: 5px;
+		font-size: 1.2em;
+		font-weight: 300;
 		line-height: 1.6;
-		margin: 20px 0;
+		margin: 0 0 50px 0;
 		max-width: 600px;
-		padding: 20px 26px;
+
 	}
 
 	& .quotes span.credit {
+		color: $color-text-light;
 		display: block;
-		font-size: .9em;
-		font-weight: 600;
+		font-size: .8em;
 		margin: 8px 0 0 0;
+	}
+
+	& .quotes span.credit strong {
+		color: $color-text;
 	}
 }
 
@@ -232,7 +240,7 @@ body {
 #footer.navbar-inverse {
 	background: #fff;
 	border: 0;
-	border-top: 1px solid #ccc;
+	border-top: $border;
 	border-radius: 0;
 	color: #555;
 	line-height: 1.5;
@@ -312,7 +320,7 @@ body {
 }
 
 #home_header {
-	padding: 110px 20px;
+	padding: 112px 20px;
 
 	& h3 {
 		font-size: 2.7em;
