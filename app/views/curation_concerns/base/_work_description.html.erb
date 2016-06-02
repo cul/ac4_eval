@@ -1,0 +1,6 @@
+<p>
+<strong>Contributors</strong> <%= presenter.contributor.join("; ") %>
+</p>
+<% presenter.description.each do |description| %>
+  <p class="work_description"><%= iconify_auto_link(description) %></p>
+<% end %>

@@ -1,6 +1,5 @@
 <%# override sufia/app/views/curation_concerns/base/_attribute_rows.html.erb -%>
 <%= presenter.attribute_to_html(:creator, catalog_search_link: true ) %>
-<%= presenter.attribute_to_html(:contributor, label: 'Contributors', catalog_search_link: true) %>
 <%= presenter.attribute_to_html(:subject, catalog_search_link: true) %>
 <%= presenter.attribute_to_html(:publisher) %>
 <%= presenter.attribute_to_html(:language) %>
@@ -13,6 +12,5 @@
 <%= presenter.attribute_to_html(:related_url) %>
 <%= presenter.attribute_to_html(:resource_type) %>
 <%= presenter.attribute_to_html(:format) %>
-<%= presenter.attribute_to_html(:resource_type) %>
 <%= presenter.attribute_to_html(:location) %>
 <%= presenter.attribute_to_html(:part_of) %>
