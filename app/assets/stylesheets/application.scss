@@ -21,16 +21,17 @@
 
 $color-cul-dark: #002D63;
 $color-cul-light: #4A90E2;
-$color-text: #333;
+$color-text: #222;
 $color-text-light: #999;
 $border: 1px solid #e3e3e3;
+$font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen",  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 /* general styles */
 
 body {
 	background: #fff;
 	color: $color-text;
-	font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen",  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: $font-family;
 	padding-top: 45px;
 }
 
@@ -204,29 +205,33 @@ body {
 
 	& h2,
 	& h3 {
+		font-size: 2.0em;
 		font-weight: 300;
 		letter-spacing: 1px;
-		margin: 0 0 40px 0;
+		margin: 0 0 30px 0;
 	}
 
 	& h3 {
+		font-size: 1.5em;
 		margin: 20px 0;
 	}
 
 	& .quotes p {
 		border-radius: 5px;
-		font-size: 1.2em;
+		font-family: 'freight-text-pro';
+		font-size: 1.4em;
 		font-weight: 300;
 		line-height: 1.6;
-		margin: 0 0 50px 0;
+		margin: 0 0 40px 0;
 		max-width: 600px;
-
 	}
 
 	& .quotes span.credit {
 		color: $color-text-light;
 		display: block;
-		font-size: .8em;
+		font-family: $font-family;
+		font-size: .7em;
+		font-style: normal;
 		margin: 8px 0 0 0;
 	}
 
